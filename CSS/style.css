@@ -30,11 +30,44 @@ header{
 }
 header div a{
     text-decoration: none;
-    color: var(--violet-fonce);
+    color: var(--violet-doux);
     font-size: 2.2rem;
     font-weight: bold;
 }
-header nav ul{
+ul li{
+    list-style: none;
+    margin-left: 15px;
+}
+ul{
     display: flex;
-    justify-content: space-between;
+}
+ul li a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 10px 0;
+}
+ul li a:hover{
+    color: var(--violet-doux);
+}
+ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width:0;
+    background-color: var(--violet-doux);
+    transition: width O.3s ease;
+}
+ul li a:hover:after{
+    width:100%;
+}
+a.active{
+    color: var(--violet-doux);
+}
+a.active::after{
+    width:100%;
 }
