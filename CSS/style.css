@@ -60,7 +60,7 @@ ul li a::after{
     height: 3px;
     width:0;
     background-color: var(--violet-doux);
-    transition: width O.3s ease;
+    transition: width O.370s ease;
 }
 ul li a:hover:after{
     width:100%;
@@ -70,4 +70,61 @@ a.active{
 }
 a.active::after{
     width:100%;
+}
+section.hero{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    text-align: center;
+}
+.hero img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 6px solid var(--violet-doux);
+}
+.hero h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    color: var(--violet-doux);
+}
+.hero p{
+    font-size: 1.3rem;
+    color: var(--gris-fonce);
+    margin-bottom: 1.2rem;
+}
+.hero a{
+    /* enlever le soulignement par défaut des liens */
+    text-decoration: none;
+    /* faire du lien un bouton */
+    display: inline-block;
+    /* ajouter une couleur au block */
+    background-color: var(--violet-doux);
+    /* ajouter une couleur au texte */
+    color: white;
+    /* la grandeur du texte */
+    font-weight: 600;
+    /* ajouter de l'espace à l'intérieur du block */
+    padding: 15px 30px;
+    /* l'arrodissement du block */
+    border-radius: 150px;
+    /* mettre le texte en majuscule */
+    text-transform: uppercase;
+    /* mettre un espacement entre les lettres */
+    letter-spacing: 1.1px;
+    /* ajouter une ombre au block */
+    font-weight: 600;
+    /* ajouter une marge au dessus du block */
+    margin-top: 1rem;
+    /* ajouter un effet de transition pour les changements de couleurs et de position */
+    transition: background-color 0.370s ease, transform 0.2s ease;    
+}
+.hero a:hover{
+    /* changer la couleur de fond du bouton */
+    background-color: var(--violet-fonce);
+    /* ajouter un effet de déplacement vers le haut */
+    transform: translateY(-3px);
 }
