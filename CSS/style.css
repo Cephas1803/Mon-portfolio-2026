@@ -71,6 +71,7 @@ a.active{
 a.active::after{
     width:100%;
 }
+/* parametre pour toute la premiere section */
 section.hero{
     display: flex;
     justify-content: center;
@@ -78,6 +79,7 @@ section.hero{
     align-items: center;
     text-align: center;
 }
+/* quelques parametres pour l'image */
 .hero img{
     width: 250px;
     height: 250px;
@@ -85,17 +87,20 @@ section.hero{
     object-fit: cover;
     border: 6px solid var(--violet-doux);
 }
+/* mise en forme du grand titre  */
 .hero h1{
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1.1rem;
     color: var(--violet-doux);
 }
+/* mise en forme du petit du paragraphe */
 .hero p{
     font-size: 1.3rem;
     color: var(--gris-fonce);
     margin-bottom: 1.2rem;
 }
+/* mise en forme du lien vers mes projets */
 .hero a{
     /* enlever le soulignement par défaut des liens */
     text-decoration: none;
@@ -127,4 +132,36 @@ section.hero{
     background-color: var(--violet-fonce);
     /* ajouter un effet de déplacement vers le haut */
     transform: translateY(-3px);
+}
+/* mise en forme de la section a propos de moi */
+.apropos{
+    /* donner de la largeur à la section */
+    width: 800px;
+    /* 6rem marge heute et basse et auto pour à gauche et à droite */
+    margin: 6rem auto;
+    text-align: center;
+}
+/* mise en forme des deux grands titres A propos et Mes competence en ecrivant section au lieu de la class de chaque section*/
+section h2{
+    font-size: 2.6rem;
+    color: var(--violet-doux);
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+/* mettre le trait qui souligne en bas pour les deux titres*/
+section h2::after{
+    display: block;
+    margin: 1.2rem auto;
+    content:'';
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    border-radius: 2px;
+}
+/* mise en forme du paragraphe */
+.apropos p{
+    margin-bottom: 1.2rem;
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
 }
