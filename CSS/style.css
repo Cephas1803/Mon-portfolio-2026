@@ -1,3 +1,4 @@
+/* declqration des variables de couleurs */
 :root{
     --violet-doux:#6C63FF;
     --violet-fonce:#534EDD;
@@ -7,16 +8,19 @@
     --gris-tres-clair:#F8F8F8;
     --gris-clair:#EEE;
 }
+/*reinitialiser les marges et les paddings de tous les elements et definir le box sizing */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* mise en forme de base du corps de la page(parametre generale du body)*/
 body{
     font-family: roboto;
     background-color: var(--gris-tres-clair);
     line-height: 1.6;
 }
+/* stylisation de l'entete de la page */
 header{
     background-color: white;
     box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.02);
@@ -28,12 +32,14 @@ header{
     align-items: center;
     padding: 2rem 3rem;
 }
+/* mise en forme du nom dans l'entete et du lien vers la page d'accueil */
 header div a{
     text-decoration: none;
     color: var(--violet-doux);
     font-size: 2.2rem;
     font-weight: bold;
 }
+/* mise en forme de la barre de navigation */
 ul li{
     list-style: none;
     margin-left: 15px;
@@ -163,5 +169,70 @@ section h2::after{
 .apropos p{
     margin-bottom: 1.2rem;
     color: var(--gris-fonce);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+/* mise en forme du tableau*/
+.competences table{
+    /* prendre une largeur de 80% */
+    width: 80%;
+    /* definition des marges*/
+    margin: 0 auto;
+    /* fusionner les bordures des cellules */
+    border-collapse: collapse;
+    background-color: white;
+    /* ajouter une ombre ou une volume au tableau */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    /* ajouter une marge en bas du tableau */
+    overflow: hidden;
+}
+/* definition des marges pour les cellules du tableau */
+.competences table th, .competences table td{
+    padding: 8px;   
+}
+/* couleur de fond et du texte pour les trois entetes du tableau*/
+.competences table thead{
+    background-color: var(--violet-fonce);
+    color: #fff;
+    /* mettre le texte en majuscule */
+    text-transform: uppercase;
+    /* aligner le texte à gauche */
+    text-align: left;
+}
+/* mettre de ligne en dessus de chaque ligne du tableau */
+.competences table tbody td{
+    /* ajouter une bordure en bas de chaque cellule du tableau */
+    border-bottom: 1px solid var(--gris-clair);
+}
+/* mettre une couleur de fond différente pour les lignes paires du tableau et ajouter un effet de survol pour les lignes du tableau */
+.competences table tbody tr:nth-child(even) {
+    background-color:#FDFDFD;
+}
+.competences table tbody tr {
+    transition: background-color 0.3s ease;
+}
+.competences table tbody tr:hover {
+    background: #F0F0F0;
+}
+footer{
+    margin-top: 3rem;
+    background: var(--violet-fonce);
+    padding: 3rem 0;
+    text-align: center;
+    color: white;
+}
+footer p{
+    color: white;
+    margin-bottom: 1.2rem;
+}
+footer a{
+    display: inline-block;
+    font-size: 1.6rem;
+    color: white;
+    margin: O 10px;
+    transition: color O.3s ease, transform 0.2s ease;
+}
+footer a:hover{
+    color: var(--orange-vif);
+    transform: translateY(-3px);
 }
