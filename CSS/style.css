@@ -229,7 +229,7 @@ footer a{
     display: inline-block;
     font-size: 1.6rem;
     color: white;
-    margin: O 10px;
+    margin: 0 10px;
     transition: color O.3s ease, transform 0.2s ease;
 }
 footer a:hover{
