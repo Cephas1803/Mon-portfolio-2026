@@ -66,10 +66,10 @@ ul li a::after{
     height: 3px;
     width:0;
     background-color: var(--violet-doux);
-    transition: width O.370s ease;
+    transition: width 0.5s ease;
 }
 ul li a:hover:after{
-    width:100%;
+    width: 100%;
 }
 a.active{
     color: var(--violet-doux);
@@ -214,6 +214,7 @@ section h2::after{
 .competences table tbody tr:hover {
     background: #F0F0F0;
 }
+/* stylisation du footer*/
 footer{
     margin-top: 3rem;
     background: var(--violet-fonce);
@@ -221,10 +222,12 @@ footer{
     text-align: center;
     color: white;
 }
+/* texte du footer */
 footer p{
     color: white;
     margin-bottom: 1.2rem;
 }
+/* liens du footer avec petite animation*/
 footer a{
     display: inline-block;
     font-size: 1.6rem;
@@ -235,4 +238,235 @@ footer a{
 footer a:hover{
     color: var(--orange-vif);
     transform: translateY(-3px);
+}
+
+
+
+/*debut du style pour la section contact*/
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 1rem auto;
+  color: #555;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.contact-form, .contact-info {
+  flex: 1 1 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--violet-doux);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: var(--violet-fonce);
+}
+
+.contact-info h2 {
+  margin-top: 0;
+  color: var(--violet-doux);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+.contact-info p a {
+    color: var(--violet-fonce);
+    text-decoration: none;
+    display:
+}
+
+.contact-info a {
+    color: var(--violet-fonce);
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* debut du style pour la page prohets */
+.grille-projets{
+    /* palecer les elements de la grille en trois colonnes de taille égale */
+    display: grid;
+    /* definir le nombre de colonnes Donc 3 et leur taille 1fr pour dire que chaque colonne prend une partie egale de l'espace disponible*/ 
+    grid-template-columns: repeat(3, 1fr);
+    /* l'espace le contenut et la bordure */
+    padding: 40px;
+    /* l'espace entre les elements de la grille */
+    gap: 30px;
+}
+.grille-projets article{
+    background-color:white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+.cartes{
+    /* faire du block un element capable d'aligner les elelements a l'interieur de lui */
+    display: flex;
+    /* aligner les elements a l'interieur du block en colonne */
+    flex-direction: column;
+    /* mettre de l'espace entre les elements a l'interieur du block */
+    justify-content: space-between;
+}
+.cartes img{
+    /* faire prendre toute la largeur du block a l'image */
+    width: 100%;
+    /* definire une auteur fixe pour toutes les images */
+    height: 200px;
+    /* permet que les image ne se derforme pas en suivant la taille du block */
+    object-fit: cover;
+    /* mettre une bordure en dessus de l'image*/
+    border-bottom: 4px solid var(--violet-doux);
+}
+/*stylisation des titres*/
+.cartes h3{
+    /*couleur des differents titres des blocks*/
+    color: var(--violet-fonce);
+    /* marge avant apres et gauche et droite*/
+    margin: 20px 15px;
+}
+.cartes p{
+    color: var(--gris-fonce);
+    /* marge O pour la marge avant et apres 15 pour la marge et droit et 20 pour la marge du Bas*/
+    margin: 0 15px 20px;
+}
+/* span utiliser pour que ces elements ne prennent pas toutes la largeur disponible comme les elements dit div*/
+.cartes span{
+    color: var(--violet-doux);
+    background-color: var(--gris-clair);
+    /* le padding est l'espace entre le contenu de l'element et sa bordure */
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+.cartes a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    /* ajouter une marge en haut du lien */
+    margin-top: 15px;
+    /* ajouter une marge en bas du lien */
+    padding: 15px 20px;
+    border-top: 1px solid var(--gris-clair);
+    /* mettre de l'espace entre les liens et les spans */
+    display: inline-block;
+    /* metre de l'espace entre les liens*/
+    margin-left: 20px;
+    /* ajouter une transition pour les changements de couleurs et de position */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* debut de la page divertissement */
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.hobbies .card {
+  background: white;
+  border-radius: 8px;
+  border-bottom: #534EDD;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobbies .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hobbies img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--violet-doux);
+}
+
+.hobbies h3 {
+  margin: 1rem;
+  color:var(--violet-doux);
+}
+
+.hobbies p {
+  margin: 0 1rem 1rem;
+  color:var(--gris-fonce);
+  font-size: 0.95rem;
+}
+
+.intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 1rem auto;
+  color:var(--gris-fonce);
+}
+/* debut du style pour la page passions */
+.passions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+} 
+.passions .card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.passions .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.passions img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.passions h3 {
+  margin: 1rem;
+  color:var(--violet-doux);
+}
+.passions p {
+  margin: 0 1rem 1rem;
+  color:var(--gris-fonce);
+  font-size: 0.95rem;
 }
